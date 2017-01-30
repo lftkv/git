@@ -1,5 +1,6 @@
-#!/bin/sh
+# Change the Name and Email of Commits:
 
+```
 git filter-branch --env-filter '
 OLD_EMAIL="your-old-email@example.com"
 CORRECT_NAME="Your Correct Name"
@@ -16,10 +17,11 @@ then
 fi
 ' --tag-name-filter cat -- --branches --tags
 
----------------------------------------------
+or:
 
 git filter-branch -f --env-filter '[ "$GIT_AUTHOR_NAME"="<old name>" ] && GIT_AUTHOR_NAME="<new name>" && GIT_COMMITTER_NAME="<new name>" GIT_AUTHOR_EMAIL="<new email>" && GIT_COMMITTER_EMAIL="<new email>"'
 
----------------------------------------------
+
 commit that with
 git push -f
+```
