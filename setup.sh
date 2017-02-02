@@ -315,12 +315,13 @@ setGitAliase()
     git config --global alias.stp "stash pop"
     git config --global alias.go "checkout"
     git config --global alias.ls "log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate"
-	git config --global alias.ll "log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --numstat"
-	git config --global alias.lds "log --pretty=format:\"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --date=relative"
-	git config --global alias.alias "!git config -l | grep alias | cut -c 7-"
-	git config --global alias.plog "log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'"
-	git config --global alias.lg "log --color --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %Cred(%cr) %C(cyan)<%an>%Creset' --abbrev-commit"
+    git config --global alias.ll "log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --numstat"
+    git config --global alias.lds "log --pretty=format:\"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --date=relative"
+    git config --global alias.alias "!git config -l | grep alias | cut -c 7-"
+    git config --global alias.plog "log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'"
+    git config --global alias.lg "log --color --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %Cred(%cr) %C(cyan)<%an>%Creset' --abbrev-commit"
     git config --global alias.upgrade "source <(curl -s https://raw.githubusercontent.com/lftkv/git/master/setup.sh) -u"
+    git config --global alias.yolo "push -f"
 }
 
 setProMode $1
