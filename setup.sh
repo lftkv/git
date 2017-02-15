@@ -323,6 +323,7 @@ setGitAliase()
     git config --global alias.upgrade "!bash -c 'source <(curl -s https://raw.githubusercontent.com/lftkv/git/master/setup.sh) -u'"
     git config --global alias.upgrademain "!bash -c 'source <(curl -s https://raw.githubusercontent.com/cpx-appdev/git-init/master/setup.sh) -u'"
     git config --global alias.yolo "push -f"
+    git config --global alias.branches "branch --list --all"
 }
 
 setProMode $1
