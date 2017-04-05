@@ -327,6 +327,7 @@ setGitAliase()
     git config --global alias.publish "push --set-upstream origin"
     git config --global alias.deletebranch "!f() { git branch -d \$1 && git push origin --delete \$1; }; f"
     git config --global alias.newbranch "!f() { git checkout -b \$1 && git push --set-upstream origin \$1; }; f"
+    git config --global alias.rw = "!f() { git log --pretty='format:%C(green) %cd %C(reset) %d %C(red) %an %C(reset) %s %n %b' --date=format:' %B %A %H:%M:%S' --branches --all --author=\"./*$1*\"; }; f"
 }
 
 setProMode $1
